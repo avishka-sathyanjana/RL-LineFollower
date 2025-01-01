@@ -123,15 +123,7 @@ def get_light_state():
         return LIGHT_STATE.BLACK
     return LIGHT_STATE.MIDDLE
 
-def get_reward(new_light_state, direction):
-    if new_light_state in [LIGHT_STATE.BLACK, LIGHT_STATE.BLACK]:
-        return -10 
-    elif direction == DIRECTION.FORWARD:
-        return 15
-    elif direction == DIRECTION.BACKWARD:
-        return 5
-    else:
-        return 10
+
 
 def get_best_action(Q_table, mode, light_state):
     # any q value is better than -inf
